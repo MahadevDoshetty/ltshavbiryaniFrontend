@@ -9,7 +9,11 @@ export default function Home() {
         <Banner />
       </div>
       <div className="flex justify-center p-5 text-2xl">
-        <div><h2>⭐⭐ Our Bestsellers ⭐⭐</h2></div>
+        <div>
+          <div></div>
+          <h2>⭐⭐ Our Bestsellers ⭐⭐</h2>
+          <div></div>
+        </div>
       </div>
       <div>
         <Menu />
