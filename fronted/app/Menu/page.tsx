@@ -1,9 +1,14 @@
 import React from 'react'
 
-const page = () => {
+const Menu = () => {
+  const menu = 
   return (
-    <div>page</div>
+    <div>
+      <div>
+        
+      </div>
+    </div>
   )
 }
 
-export default page
+export default Menu
