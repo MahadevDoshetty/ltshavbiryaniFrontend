@@ -11,12 +11,12 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "tse4.mm.bing.net",
-      },{
+      }, {
         protocol: "https",
         hostname: "chatgpt.com",
       },
     ],
-  },
+  }
 };
 
 export default nextConfig;

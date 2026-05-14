@@ -1,6 +1,8 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
+import { FaShoppingBasket } from 'react-icons/fa';
+import { FaCartShopping } from 'react-icons/fa6';
 
 const Menu = () => {
   const router = useRouter();
@@ -63,7 +65,7 @@ const Menu = () => {
           <div key={obj.itemId} className='flex justify-center p-2 space-x-3 w-full h-50 border-white border-2 rounded-2xl bg-white' >
             <div className=''>
               <img src={obj.itemImageLink} className='h-full w-40 rounded-2xl' width='auto' height='auto' alt="Image" />
-              <button className='rounded-2xl absolute bg-[#1A2B3A] p-2  text-white flex place-self-end' onClick={() => addFunc(obj)} >Add +</button>
+              <button className='rounded-2xl absolute bg-yellow-500 p-2  text-black flex place-self-end' onClick={() => addFunc(obj)} >Add +</button>
             </div>
             <div className='w-2xs h-40'>
               <h2 className='text-xl font-bold '>{obj.itemTitle}</h2>
@@ -73,9 +75,9 @@ const Menu = () => {
           </div>
         )
       })}
-      <div className='flex flex-col fixed w-full place-content-end bottom-0' >{gcs && <div className='flex justify-around bg-yellow-300 place-items-center-safe text-black ' >
-        <p className='p-2 text-xl' >Items added to cart</p>
-        <button className='rounded-2xl bg-[#1A2B3A] p-2 m-2  text-white' onClick={() => router.push("/Cart")} >Go to Cart</button>
+      <div className='flex flex-col fixed w-full place-content-end bottom-0' >{gcs && <div className='flex justify-around bg-yellow-500  place-items-center-safe text-black ' >
+        <p className='p-2 text-xl left-5' >Items added to cart! </p>
+        <button className='rounded-2xl bg-[#1A2B3A] p-2 text-white ' onClick={() => router.push("/Cart")} >Go to Cart <FaShoppingBasket className='flex place-self-center' /> </button>
       </div>
       }
       </div>
