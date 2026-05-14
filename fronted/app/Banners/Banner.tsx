@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div className='flex  p-2 m-2 rounded-2xl overflow-x-auto scrollbar-none' >
             {banner.map((link, index) => {
-                return <Image src={link} alt="Banner" key={index} height={200} width={300} />
+                return <Image src={link} alt="Banner" key={index} className='md:w-full' height={200} width={300} />
             })}
         </div>
     )
