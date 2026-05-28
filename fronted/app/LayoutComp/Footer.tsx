@@ -1,54 +1,68 @@
-import React from 'react'
 import Image from 'next/image'
+
 const Footer = () => {
-  const date = new Date();
-  const year = date.getFullYear();
+  const year = new Date().getFullYear();
+
   return (
-    <div className='w-full p-6 bg-[#1A2B3A] text-white rounded-t-2xl' >
-      <div>
-        <div className='flex space-x-1.5' >
-          <Image src={"/Logo.png"} alt='Logo' height={45} width={45} />
-          <div className='flex flex-col justify-center max-w-fit font-extrabold'><h2>LtsHavBiryani</h2></div>
+    <footer className="bg-[#0B1F2E] border-t border-[#2C4A5F] mt-10">
+
+      <div className="max-w-7xl mx-auto px-5 py-10 grid md:grid-cols-4 gap-8 text-sm">
+
+        {/* BRAND */}
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-2">
+            <Image src="/Logo.svg" width={40} height={40} alt="logo" className="rounded-xl" />
+            <span className="font-semibold text-white text-lg">
+              LtsHavBiryani
+            </span>
+          </div>
+
+          <p className="text-[#9CA3AF]">
+            Biryani for <span className="text-[#F4B400]">every</span> emotion.
+          </p>
         </div>
-        <div className='tracking-widest font-bold text-xl pl-5'>
-          <h1>Biryani for <span className='text-orange-400' >every </span>emotion!</h1>
+
+        {/* COMPANY */}
+        <div className="flex flex-col gap-2">
+          <h3 className="text-white font-semibold mb-2">Company</h3>
+          <button className="text-[#9CA3AF] hover:text-white transition text-left">About</button>
+          <button className="text-[#9CA3AF] hover:text-white transition text-left">Careers</button>
+          <button className="text-[#9CA3AF] hover:text-white transition text-left">Contact</button>
         </div>
-        <div className='pl-5'>
-          <h2>Know more about us!</h2>
-          <div className='flex' >
-            <button>
-              <Image src={"/Instagram.svg"} alt='Media' height={35} width={35} />
-            </button>
-            <button>
-              <Image src={"/Instagram.svg"} alt='Media' height={35} width={35} />
-            </button>
-            <button>
-              <Image src={"/Instagram.svg"} alt='Media' height={35} width={35} />
-            </button>
-            <button>
-              <Image src={"/Instagram.svg"} alt='Media' height={35} width={35} />
-            </button>
-            <button>
-              <Image src={"/Instagram.svg"} alt='Media' height={35} width={35} />
-            </button>
+
+        {/* LEGAL */}
+        <div className="flex flex-col gap-2">
+          <h3 className="text-white font-semibold mb-2">Legal</h3>
+          <button className="text-[#9CA3AF] hover:text-white transition text-left">Privacy Policy</button>
+          <button className="text-[#9CA3AF] hover:text-white transition text-left">Terms</button>
+          <button className="text-[#9CA3AF] hover:text-white transition text-left">Refund Policy</button>
+        </div>
+
+        {/* SOCIAL */}
+        <div className="flex flex-col gap-3">
+          <h3 className="text-white font-semibold">Follow Us</h3>
+
+          <div className="flex gap-3">
+            {[1,2,3].map((i) => (
+              <button
+                key={i}
+                className="bg-[#1E3A4C] p-2 rounded-lg hover:bg-[#F4B400] transition"
+              >
+                <Image src="/Instagram.svg" width={20} height={20} alt="social" />
+              </button>
+            ))}
           </div>
         </div>
-        <div className='grid grid-cols-4 grid-rows-2 text-xs pl-2.5 text-[#E5E0D8]'>
-          <button>Bulk Orders</button>
-          <button>Refund Policy</button>
-          <button>Privacy Policy</button>
-          <button>Terms and Conditions</button>
-          <button>Careers</button>
-          <button>Security</button>
-          <button>For Stakeholders</button>
-          <button>Contact Us</button>
-        </div>
-        <div className='flex justify-center pt-5 text-xs'>
-          <h3>© {year} Konnothu Veetil Food Company. All rights reserved </h3>
-        </div>
+
       </div>
-    </div >
+
+      {/* BOTTOM */}
+      <div className="text-center text-xs text-[#9CA3AF] pb-6">
+        © {year} LtsHavBiryani. All rights reserved.
+      </div>
+
+    </footer>
   )
 }
 
-export default Footer
+export default Footer;
